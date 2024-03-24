@@ -1,16 +1,11 @@
-import { categories } from "../../helper/data"
+import "./Header.scss"
 
-function Header({clickChange}){
+function Header(){
 
     
     return(
-        <div>
+        <div className="header">
             <h1>Product List</h1>
-            <ul>
-        {categories.map((kategori, index) => 
-          <button onClick={()=>clickChange(kategori)} key={index}>{kategori}</button>
-        )}
-      </ul>
         </div>
     )
 }

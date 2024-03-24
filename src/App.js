@@ -1,18 +1,28 @@
 import { useState } from "react";
+import ProductList from "./components/product/ProductList";
+import SideBar from "./components/sidebar/SideBar";
+import "./App.scss"
 import Header from "./components/header/Header";
-import ProductCard from "./components/productCard/ProductCard";
-
 
 function App() {
-  const [selectedCategori,SetSelectedCategori]=useState("all")
-  const categoryChange=(kategori)=>{
+  const [selectedCategori, SetSelectedCategori] = useState("all")
+  const categoryChange = (kategori) => {
     SetSelectedCategori(kategori)
   }
 
   return (
-    <div>
-      <Header clickChange={categoryChange}/>
-      <ProductCard  kategori={selectedCategori}/>
+    <div className="container">
+      <div className="header">
+        <Header/>
+      </div>
+      <div className="main">
+        
+          <SideBar clickChange={categoryChange} />
+   
+        
+          <ProductList category={selectedCategori} />
+
+      </div>
     </div>
   );
 }

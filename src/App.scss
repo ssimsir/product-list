@@ -1,0 +1,19 @@
+@import "./scss/reset";
+
+body {
+	background-image: linear-gradient(to top, #a8edea 0%, rgba(223, 133, 223, 0.404) 100%);
+	min-height: 100vh;
+
+	.container {
+		display: flex;
+		flex-direction: column;
+
+		.header {
+			text-align: center;
+		}
+		.main {
+			display: grid;
+			grid-template-columns: 1fr 6fr;
+		}
+	}
+}
